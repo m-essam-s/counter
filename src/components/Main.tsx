@@ -5,11 +5,11 @@ const Main = () =>{
     const [count, setCount] = useState(0);
 
     const add = () => {
-        setCount(count + 1);
+        setCount((prevCount) => prevCount + 1);
     }
 
     const subtract = () => {
-        setCount(count - 1);
+        setCount((prevCount) => prevCount - 1);
     }
 
     return (
