@@ -1,7 +1,8 @@
 import { useState } from "react";
+import Count from "./Count.js";
 
-const Main = () =>{
-    
+const Main = () => {
+
     const [count, setCount] = useState(0);
 
     const add = () => {
@@ -15,9 +16,9 @@ const Main = () =>{
     return (
         <div className="counter">
             <button className="counter--minus" onClick={subtract}>–</button>
-            <div className="counter--count">
-                <h1>{count}</h1>
-            </div>
+            <Count
+                count={count}
+            />
             <button className="counter--plus" onClick={add}>+</button>
         </div>
     )
